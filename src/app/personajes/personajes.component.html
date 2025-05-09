@@ -1,0 +1,35 @@
+<div class="container mt-5 pt-4">
+    <!-- Barra de búsqueda -->
+    <div class="row mb-4">
+      <div class="col-md-6 mx-auto">
+        <div class="input-group">
+          <input type="text" class="form-control bg-dark text-light" 
+                 placeholder="Buscar personaje..." #searchInput>
+          <button class="btn btn-outline-warning" type="button" 
+                  (click)="(searchInput.value)">
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Listado de personajes por juego -->
+    <div *NgFor="let juego of juegos" class="mb-5">
+      <h2 class="game-title border-bottom pb-2 border-warning mb-4">
+        {{juego.nombre}}
+      </h2>
+      
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4" *NgFor="let personaje of juego.personajes">
+          <div class="character-card card h-100 bg-dark-transparent border-warning">
+            <img [src]="personaje.imagen" class="card-img-top character-image" [alt]="personaje.nombre">
+            <div class="card-body">
+              <h3 class="character-name card-title text-warning">{{personaje.nombre}}</h3>
+              <p class="character-game text-muted">{{personaje.rol}}</p>
+              <p class="character-desc card-text">{{personaje.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

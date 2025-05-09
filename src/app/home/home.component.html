@@ -1,0 +1,467 @@
+<!-- home.component.html -->
+<div class="container mt-4"> 
+    <div class="gta-alert-container mb-4 p-3"> 
+      <div class="gta-alert-message message-1">¡JUEGA YA A LA SAGA GTA!</div>
+      <div class="gta-alert-message message-2">ALL WE HAD TO DO, WAS FOLLOW THE DAMN TRAIN, CJ!</div>
+      <div class="gta-alert-message message-3">DESCUBRE DE QUE PERSONAJES SON ESTAS FRASES ICONICAS DE LA SAGA!</div>
+    </div>
+  </div>
+  
+  <!-- Primera fila de cards -->
+  <div class="row">
+    <!-- GTA San Andreas -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://img.gta5-mods.com/q75/images/gta-san-andreas-loading-theme/5f42d6-1024x1024bb.jpg" class="card-img-top" alt="San Andreas">
+        <div class="card-body">
+          <h5 class="card-title">Grand Theft Auto: San Andreas (2004)</h5>
+          <p class="card-text">El clásico juego de Rockstar ambientado en los 90.</p>
+          <details (toggle)="controlarMusica($event, 'sa')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              GTA: San Andreas sigue la historia de Carl "CJ" Johnson en su regreso a Los Santos...
+              <audio #audioSa src="assets/music/GTA SA.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA V -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://cdn.pixabay.com/photo/2021/08/31/19/13/grand-theft-auto-v-6589907_1280.png" class="card-img-top" alt="GTA V">
+        <div class="card-body">
+          <h5 class="card-title">GTA V (2013)</h5>
+          <p class="card-text">Explora Los Santos en el juego más exitoso de Rockstar Games.</p>
+          <details (toggle)="controlarMusica($event, 'v')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              GTA V cuenta con tres protagonistas jugables, un enorme mundo abierto...
+              <audio #audioV src="assets/music/GTA V.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA Vice City -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://i.pinimg.com/564x/1f/1f/9a/1f1f9add8ba40422cf110e6c5e20cbc2.jpg" class="card-img-top" alt="Vice City">
+        <div class="card-body">
+          <h5 class="card-title">GTA Vice City (2002)</h5>
+          <p class="card-text">Ambientado en los vibrantes años 80 de Miami.</p>
+          <details (toggle)="controlarMusica($event, 'vc')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              GTA Vice City sigue la historia de Tommy Vercetti en su ascenso al poder criminal...
+              <audio #audioVc src="assets/music/GTA VC.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Segunda fila de cards -->
+  <div class="row mt-4">
+    <!-- GTA III -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://play-lh.googleusercontent.com/nhbVRuuXBSFNH9sQzrjBUUchw7YNE_miijD3OVLjWXQSAkKfWn8EWkfoFsiDrEC4zA" class="card-img-top" alt="GTA III">
+        <div class="card-body">
+          <h5 class="card-title">Grand Theft Auto III (2001)</h5>
+          <p class="card-text">El que cambió la industria. Primer GTA en 3D.</p>
+          <details (toggle)="controlarMusica($event, '3')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Claude busca venganza en Liberty City después de ser traicionado...
+              <audio #audio3 src="assets/music/GTA 3.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA IV -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://w0.peakpx.com/wallpaper/869/936/HD-wallpaper-gta-4-games.jpg" class="card-img-top" alt="GTA IV">
+        <div class="card-body">
+          <h5 class="card-title">Grand Theft Auto IV (2008)</h5>
+          <p class="card-text">Historia más madura y oscura. Realismo brutal.</p>
+          <details (toggle)="controlarMusica($event, 'iv')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Niko Bellic llega a Liberty City para buscar el "sueño americano"...
+              <audio #audioIv src="assets/music/GTA IV.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA LCS -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://images.dwncdn.net/images/t_app-icon-l/p/a10e795c-9b6a-11e6-9c6d-00163ec9f5fa/2135948110/2097_4-76640354-logo" class="card-img-top" alt="GTA LCS">
+        <div class="card-body">
+          <h5 class="card-title">GTA: Liberty City Stories (2005)</h5>
+          <p class="card-text">Salió primero en PSP, pero fue tan bueno que llegó a PS2.</p>
+          <details (toggle)="controlarMusica($event, 'lcs')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Toni Cipriani regresa a Liberty City para restaurar el honor de su familia...
+              <audio #audioLcs src="assets/music/GTA LCS.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Tercera fila de cards -->
+  <div class="row mt-4">
+    <!-- GTA VCS -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://www.igrandtheftauto.com/content/images/gtavcs-logo.png" class="card-img-top" alt="GTA VCS">
+        <div class="card-body">
+          <h5 class="card-title">GTA: Vice City Stories (2006)</h5>
+          <p class="card-text">Una precuela de Vice City con mejoras gráficas.</p>
+          <details (toggle)="controlarMusica($event, 'vcs')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Victor Vance, un soldado, entra al mundo del crimen para mantener a su familia...
+              <audio #audioVcs src="assets/music/GTA VCS.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA CW -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://play-lh.googleusercontent.com/cNE2roM5cV3F2VFABVGVIzjmfanWzMiTiOzIQCtKR9X1EFIHowqhav5wM2_ZmnZAoLY" class="card-img-top" alt="GTA CW">
+        <div class="card-body">
+          <h5 class="card-title">GTA: Chinatown Wars (2009)</h5>
+          <p class="card-text">Para Nintendo DS, con jugabilidad rápida y humor ácido.</p>
+          <details (toggle)="controlarMusica($event, 'cw')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Huang Lee busca recuperar una espada familiar robada...
+              <audio #audioCw src="assets/music/GTA CW.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  
+    <!-- GTA 1997 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 border-light">
+        <img src="https://i.pinimg.com/736x/f2/ce/8e/f2ce8efcf7ce4304ebd31cd09bafcd0b.jpg" class="card-img-top" alt="GTA 1997">
+        <div class="card-body">
+          <h5 class="card-title">Grand Theft Auto (1997)</h5>
+          <p class="card-text">El que lo empezó todo. Vista cenital y libertad total.</p>
+          <details (toggle)="controlarMusica($event, '1997')">
+            <summary>Ver más</summary>
+            <div class="details-content">
+              Eres un criminal que asciende en el mundo del crimen...
+              <audio #audio1997 src="assets/music/GTA 1997.mp3" preload="auto"></audio>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- En home.component.html -->
+<div class="container mt-5" id="ranking">
+    <h2 class="text-center mb-4 border-bottom pb-2 border-warning">Ranking Oficial GTA</h2>
+    
+    <div class="table-responsive">
+      <table class="table table-hover table-dark align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th>#</th>
+            <th>Juego</th>
+            <th>Año</th>
+            <th>Puntuación</th>
+            <th>Plataformas</th>
+            <th>Presupuesto</th>
+            <th>Ventas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- GTA V -->
+          <tr>
+            <td>1</td>
+            <td><strong>Grand Theft Auto V</strong></td>
+            <td>2013</td>
+            <td><span class="badge bg-success">9.7</span></td>
+            <td>PS3, PS4, PS5, Xbox 360, Xbox One, Series X/S, PC</td>
+            <td>$265 millones</td>
+            <td>200 millones</td>
+          </tr>
+          
+          <!-- GTA San Andreas -->
+          <tr>
+            <td>2</td>
+            <td><strong>Grand Theft Auto: San Andreas</strong></td>
+            <td>2004</td>
+            <td><span class="badge bg-success">9.5</span></td>
+            <td>PS2, Xbox, PC, Mobile, PS3, PS4</td>
+            <td>$10 millones</td>
+            <td>27.5 millones</td>
+          </tr>
+          
+          <!-- GTA IV -->
+          <tr>
+            <td>3</td>
+            <td><strong>Grand Theft Auto IV</strong></td>
+            <td>2008</td>
+            <td><span class="badge bg-primary">9.8</span></td>
+            <td>PS3, Xbox 360, PC</td>
+            <td>$100 millones</td>
+            <td>25 millones</td>
+          </tr>
+          
+          <!-- GTA III -->
+          <tr>
+            <td>4</td>
+            <td><strong>Grand Theft Auto III</strong></td>
+            <td>2001</td>
+            <td><span class="badge bg-primary">9.7</span></td>
+            <td>PS2, PC, Xbox, Mobile</td>
+            <td>$5 millones</td>
+            <td>14.5 millones</td>
+          </tr>
+          
+          <!-- GTA Vice City -->
+          <tr>
+            <td>5</td>
+            <td><strong>Grand Theft Auto: Vice City</strong></td>
+            <td>2002</td>
+            <td><span class="badge bg-primary">9.2</span></td>
+            <td>PS2, Xbox, PC, Mobile, PS3, PS4</td>
+            <td>$5 millones</td>
+            <td>17.5 millones</td>
+          </tr>
+          
+          <!-- GTA Chinatown Wars -->
+          <tr>
+            <td>6</td>
+            <td><strong>GTA: Chinatown Wars</strong></td>
+            <td>2009</td>
+            <td><span class="badge bg-primary">9.3</span></td>
+            <td>Nintendo DS, PSP, iOS, Android</td>
+            <td>$1-2 millones</td>
+            <td>2.5 millones</td>
+          </tr>
+          
+          <!-- GTA Liberty City Stories -->
+          <tr>
+            <td>7</td>
+            <td><strong>GTA: Liberty City Stories</strong></td>
+            <td>2005</td>
+            <td><span class="badge bg-secondary">8.8</span></td>
+            <td>PSP, PS2, Mobile</td>
+            <td>$4 millones</td>
+            <td>8 millones</td>
+          </tr>
+          
+          <!-- GTA Vice City Stories -->
+          <tr>
+            <td>8</td>
+            <td><strong>GTA: Vice City Stories</strong></td>
+            <td>2006</td>
+            <td><span class="badge bg-secondary">8.6</span></td>
+            <td>PSP, PS2</td>
+            <td>$4 millones</td>
+            <td>6 millones</td>
+          </tr>
+          
+          <!-- GTA 1997 -->
+          <tr>
+            <td>9</td>
+            <td><strong>Grand Theft Auto (1997)</strong></td>
+            <td>1997</td>
+            <td><span class="badge bg-secondary">8.6</span></td>
+            <td>PC, PlayStation</td>
+            <td>$1 millón</td>
+            <td>1 millón</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- En home.component.html - Añádelo donde lo necesites -->
+<div class="container my-5" id="contacto">
+  <h2 class="text-center">Contactanos</h2>
+  <form class="mt-4" (submit)="enviarFormulario($event)">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control bg-dark text-light border-secondary" 
+             id="nombre" placeholder="Tu nombre">
+    </div>
+    <div class="mb-3">
+      <label for="correo" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control bg-dark text-light border-secondary" 
+             id="correo" placeholder="nombre@ejemplo.com">
+    </div>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control bg-dark text-light border-secondary" 
+                id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
+
+<main class="history-section">
+  <!-- GTA (1997) -->
+  <section id="gta-1997" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto (1997)</h2>
+          <img src="https://i.ytimg.com/vi/ahOIJNLLtkI/maxresdefault.jpg" alt="GTA 1997">
+      </div>
+      <div class="game-story">
+          <p>En el primer juego de la saga, controlas a un criminal anónimo que trabaja en tres ciudades (Liberty City, San Andreas y Vice City) realizando trabajos para mafias y bandas locales. El objetivo es ganar suficiente respeto y dinero para ascender en el mundo del crimen.</p>
+          <ul>
+              <li>Desarrollado por DMA Design</li>
+              <li>8 personajes jugables diferentes</li>
+              <li>Controversial por su violencia</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA III (2001) -->
+  <section id="gta-3" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto III (2001)</h2>
+          <img src="https://cdn2.unrealengine.com/egs-grandtheftautoiiithedefinitiveedition-rockstargames-g1a-00-1920x1080-d38b469bdaa4.jpg" alt="GTA III">
+      </div>
+      <div class="game-story">
+          <p>Después de ser traicionado y dado por muerto por su novia Catalina durante un robo, Claude sobrevive y empieza a trabajar para varias organizaciones criminales en Liberty City. Su objetivo final es encontrar a Catalina y vengarse de ella mientras asciende en el mundo del crimen.</p>
+          <ul>
+              <li>Primer GTA en 3D</li>
+              <li>Protagonista mudo</li>
+              <li>Introdujo el sistema de pandillas</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA Vice City (2002) -->
+  <section id="gta-vice-city" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto: Vice City (2002)</h2>
+          <img src="https://wallpapercat.com/w/full/d/c/4/2154310-3840x2160-desktop-4k-gta-vice-city-wallpaper-image.jpg" alt="GTA Vice City">
+      </div>
+      <div class="game-story">
+          <p>Ambientado en 1986, Tommy es enviado a Vice City (inspirada en Miami) tras salir de prisión. Después de que una operación de drogas salga mal, debe recuperar el dinero perdido, vengarse de sus traidores y construir su propio imperio criminal, haciéndose con el control de toda la ciudad.</p>
+          <ul>
+              <li>Banda sonora con música de los 80</li>
+              <li>Primer juego con propiedad de negocios</li>
+              <li>Introdujo motocicletas</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA San Andreas (2004) -->
+  <section id="gta-san-andreas" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto: San Andreas (2004)</h2>
+          <img src="https://i.blogs.es/5e4442/gta-san-andreas-noviass/1366_521.jpeg" alt="GTA San Andreas">
+      </div>
+      <div class="game-story">
+          <p>En 1992, CJ regresa a Los Santos después de la muerte de su madre. Encuentra a su familia y su antigua banda, los Grove Street Families, en crisis. A medida que avanza, CJ debe restaurar el poder de su familia, enfrentarse a la corrupción policial, traiciones, y expandir su imperio criminal a lo largo de San Andreas, que incluye las ciudades de Los Santos, San Fierro y Las Venturas.</p>
+          <ul>
+              <li>Mapa enorme con 3 ciudades</li>
+              <li>Sistema de estadísticas (ejercicio, comida)</li>
+              <li>Personalización de personaje</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA Liberty City Stories (2005) -->
+  <section id="gta-liberty-city-stories" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto: Liberty City Stories (2005)</h2>
+          <img src="https://play-lh.googleusercontent.com/Ei6tQeDMB48nL47BAoJi4KdKGNUKhcvo9ywsQeT98-X6dweXnogjN-91WHY8cKQFHxU=w526-h296-rw" alt="GTA LCS">
+      </div>
+      <div class="game-story">
+          <p>Toni regresa a Liberty City tras años de exilio por haber matado a alguien por orden de su jefe. Al volver, lucha por restaurar su reputación y ascender dentro de la familia Leone, enfrentándose a traiciones internas, mafias rivales y a una ciudad sumida en el caos.</p>
+          <ul>
+              <li>Originalmente para PSP</li>
+              <li>Misiones de crimen organizado</li>
+              <li>Mejoró el sistema de pandillas</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA Vice City Stories (2006) -->
+  <section id="gta-vice-city-stories" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto: Vice City Stories (2006)</h2>
+          <img src="https://multiplayer.net-cdn.it/thumbs/images/2006/11/08/104622.grand-theft-auto-vice-city-stories.elcji_jpg_800x0_crop_upscale_q85.jpg" alt="GTA VCS">
+      </div>
+      <div class="game-story">
+          <p>En 1984, Victor, un soldado del ejército, se involucra en el crimen para mantener a su familia. Después de ser traicionado y expulsado del ejército, Victor construye un imperio criminal en Vice City, enfrentándose a traficantes, mafiosos y militares corruptos.</p>
+          <ul>
+              <li>Sistema de control de territorios</li>
+              <li>Negocios ilegales mejorados</li>
+              <li>Introdujo el buceo</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA Chinatown Wars (2009) -->
+  <section id="gta-chinatown-wars" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto: Chinatown Wars (2009)</h2>
+          <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/01/gta-chinatown-wars-cult-classic-deserves-sequel.jpg" alt="GTA CW">
+      </div>
+      <div class="game-story">
+          <p>Tras la muerte de su padre, Huang viaja a Liberty City para entregar una espada ancestral a su tío como símbolo de respeto y poder. Sin embargo, es traicionado, y debe navegar por la traicionera mafia china mientras intenta restaurar el honor de su familia y descubrir quién está detrás del asesinato de su padre.</p>
+          <ul>
+              <li>Gráficos cel-shaded</li>
+              <li>Sistema de tráfico de drogas</li>
+              <li>Minijuegos táctiles innovadores</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA IV (2008) -->
+  <section id="gta-4" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto IV (2008)</h2>
+          <img src="https://sm.ign.com/ign_es/news/g/gta-4-disa/gta-4-disappeared-from-steam-and-heres-why_2kee.jpg" alt="GTA IV">
+      </div>
+      <div class="game-story">
+          <p>Tres criminales de diferentes orígenes se ven atrapados en un ciclo de grandes robos, problemas personales y enfrentamientos con agencias gubernamentales y otros criminales. El juego explora sus vidas entrelazadas mientras realizan elaborados atracos para asegurarse un futuro mejor... o simplemente sobrevivir.</p>
+          <ul>
+              <li>Historia más madura y oscura</li>
+              <li>Física realista (motor Euphoria)</li>
+              <li>Sistema de amigos y citas</li>
+          </ul>
+      </div>
+  </section>
+
+  <!-- GTA V (2013) -->
+  <section id="gta-5" class="history-card">
+      <div class="game-header">
+          <h2>Grand Theft Auto V (2013)</h2>
+          <img src="https://gaming-cdn.com/images/news/articles/8408/cover/1000x563/gta-v-ha-perdido-el-40-de-sus-jugadores-de-pc-tras-la-incorporacion-del-software-anticheats-cover66ec07995e010.jpg" alt="GTA V">
+      </div>
+      <div class="game-story">
+          <p>Sigue a tres protagonistas: Michael (ex-atracador), Franklin (gangster joven) y Trevor (sociópata), que realizan grandes atracos en Los Santos.</p>
+          <ul>
+              <li>Primer juego con 3 protagonistas</li>
+              <li>Sistema de atracos elaborados</li>
+              <li>Mundo abierto más detallado</li>
+          </ul>
+      </div>
+  </section>
+</main>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "actividad-gta": {
+    "examen-final": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/actividad-gta",
+            "outputPath": "dist/examen-final",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,9 +27,18 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+  
+  "node_modules/bootswatch/dist/darkly/bootstrap.min.css",
+  "src/styles.css"
+  
+],
+
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -59,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "actividad-gta:build:production"
+              "buildTarget": "examen-final:build:production"
             },
             "development": {
-              "buildTarget": "actividad-gta:build:development"
+              "buildTarget": "examen-final:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,12 +94,15 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+ "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "94aaf20f-a435-4533-8880-67b1820e80a1"
   }
 }
