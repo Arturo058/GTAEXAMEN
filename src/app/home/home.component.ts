@@ -23,6 +23,18 @@ export class HomeComponent {
     }
   }
 
+  scrollToSection(event: Event, id: string) {
+    const details = event.target as HTMLDetailsElement;
+    if (details.open) {
+      setTimeout(() => {
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }
+
   buscarSeccion(termino: string) {
     const secciones: {[key: string]: string} = {
       'inicio': '/',
