@@ -402,3 +402,77 @@ html {
     font-size: 1.1rem;
   }
 }
+/** BARRA DE NAVEGACION 
+/* Variables de color Mostaza Oscuro */
+:root {
+  --mostaza: #c09f36;       /* Dorado mostaza (como el oro vintage) */
+  --mostaza-oscuro: #916800; /* Mostaza oscuro (para contrastes) */
+  --bg-dark: #1a1a1a;       /* Fondo oscuro profundo */
+  --text-light: #f5f5f5;    /* Texto claro */
+}
+
+/* Navbar - Estilo Mostaza */
+.navbar {
+  background-color: var(--bg-dark) !important;
+  border-bottom: 2px solid var(--mostaza);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.navbar-brand {
+  font-family: 'Impact', sans-serif;
+  font-size: 1.8rem;
+  color: var(--mostaza) !important;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  margin: 0 8px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--mostaza) !important;
+}
+
+.nav-link.active::after {
+  background-color: var(--mostaza);
+}
+
+/* Botón de búsqueda - Mostaza */
+.btn-outline-success {
+  color: var(--mostaza);
+  border-color: var(--mostaza);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--mostaza);
+  color: var(--bg-dark);
+  font-weight: bold;
+}
+
+/* Input y focus */
+.form-control {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: var(--text-light);
+}
+
+.form-control:focus {
+  border-color: var(--mostaza);
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+/* Footer - Estilo Mostaza */
+footer {
+  background-color: var(--bg-dark);
+  border-top: 2px solid var(--mostaza);
+  color: var(--text-light);
+}
+
+footer:hover {
+  border-top-color: var(--mostaza-oscuro);
+}
